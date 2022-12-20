@@ -399,3 +399,25 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+.post-footer .related {
+    margin: 14px 0;
+    padding-inline-start: var(--radius);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    padding: var(--gap);
+}
+
+.post-footer .related strong {
+    font-size: 1.17em;
+}
+
+.post-footer .related ul  {
+    padding-inline-start: var(--gap);
+}
+
+.post-footer .related a:hover {
+    box-shadow: 0 1px;
+}
+
