@@ -319,6 +319,10 @@
     background: var(--code-bg);
 }
 
+.post-tags a::before {
+    content: "#";
+}
+
 .post-tags a:hover,
 .paginav a:hover {
     background: var(--border);
