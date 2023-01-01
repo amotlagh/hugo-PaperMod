@@ -4,6 +4,7 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
+<div class="list-page">
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
@@ -35,7 +36,7 @@
   {{- else }}{{ .Content }}{{ end }}
 </div>
 {{- end }}
-
+</div>
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
