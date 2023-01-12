@@ -13,6 +13,7 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
+    {{- template "partials/templates/tag_manager_body.html" . }}
     {{- partialCached "header.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
