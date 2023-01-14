@@ -140,11 +140,12 @@ body:not(.dark) #sun {
     }
 
     .header ul.menu li.menu-item {
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid;
+        border-color: var(--border);
         margin-top: 5px;
         transform: scale(1.15) translateY(-30px);
         opacity: 0;
-        transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), border-color 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
 
     .header ul.menu li.menu-item:last-child{
@@ -185,7 +186,7 @@ body:not(.dark) #sun {
     .header ul.menu li.menu-item a {
         display: block;
         position: relative;
-        color: #dadadb;
+        color: var(--primary);
         font-weight: 100;
         text-decoration: none;
         font-size: 17px;
@@ -196,14 +197,14 @@ body:not(.dark) #sun {
 
     .header.menu-opened {
         height: 100%;
-        background-color: #000;
+        background-color: var(--theme);
         transition: all 0.3s ease-in, background 0.5s ease-in;
         transition-delay: 0.25s;
         position: fixed;
     }
 
     .header.menu-opened .burger-container #burger .bar {
-        background: #fff;
+        background: var(--primary);
     }
 
     .header.menu-opened .burger-container {
@@ -255,13 +256,11 @@ body:not(.dark) #sun {
     }
 
     .logo a, button#theme-toggle,.lang-switch li{
-        color: var(--primary);
         transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
 
     .header.menu-opened .logo a, .header.menu-opened button#theme-toggle,
     .header.menu-opened .lang-switch li{
-        color: #DADADB;
         transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
 
