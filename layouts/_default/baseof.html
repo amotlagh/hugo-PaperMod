@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}"  id="top">
 
 <head>
     {{- partial "head.html" . }}
@@ -11,8 +11,7 @@
 {{- end -}}
 {{- if eq site.Params.defaultTheme `dark` -}}
 {{- print " dark" }}
-{{- end -}}
-" id="top">
+{{- end -}}">
     {{- template "partials/templates/tag_manager_body.html" . }}
     {{- partialCached "header.html" . .Page -}}
     <main class="main">

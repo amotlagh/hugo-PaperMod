@@ -35,10 +35,11 @@
 .archive-entry-title {
     margin: 5px 0;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .archive-count,
 .archive-meta {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 12px;
 }

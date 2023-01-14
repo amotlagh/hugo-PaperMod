@@ -8,7 +8,7 @@
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/amotlagh/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 {{- end }}
@@ -24,11 +24,13 @@
 {{- partial "extend_footer.html" . }}
 
 <script>
-    let b=document.querySelector("#menu-trigger"),
-    m=document.querySelector(".menu");
-    b.addEventListener("click",function(){m.classList.toggle("hidden")}),
-    document.body.addEventListener('click',function(a){b.contains(a.target)||m.classList.add("hidden")}),
-    document.querySelector("#cd").innerText=(new Date).getFullYear()
+    let burger = document.querySelector('.burger-container'),
+        header = document.querySelector('.header'),
+        htmlAll = document.querySelector('html');
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened'),
+        htmlAll.classList.toggle('js-overflow-hidden');
+    };
 </script>
 
 <script>
@@ -140,4 +142,5 @@
         }
     });
 </script>
+
 {{- end }}
