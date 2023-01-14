@@ -197,7 +197,7 @@ body:not(.dark) #sun {
 
     .header.menu-opened {
         height: 100%;
-        background-color: var(--theme);
+        background-color: var(--contrast);
         transition: all 0.3s ease-in, background 0.5s ease-in;
         transition-delay: 0.25s;
         position: fixed;

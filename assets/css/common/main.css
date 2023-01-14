@@ -69,6 +69,6 @@ pre:hover .copy-code {
 
 @media screen and (max-width:768px) {
     .main {
-        margin-top: var(--header-height);
+        padding-top: var(--header-height);
     }
 }
