@@ -141,7 +141,7 @@ body:not(.dark) #sun {
 
     .header ul.menu li.menu-item {
         border-bottom: 1px solid;
-        border-color: var(--border);
+        border-color: var(--menu-border);
         margin-top: 5px;
         transform: scale(1.15) translateY(-30px);
         opacity: 0;
