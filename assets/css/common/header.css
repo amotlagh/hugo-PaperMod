@@ -256,12 +256,7 @@ body:not(.dark) #sun {
     }
 
     .logo a, button#theme-toggle,.lang-switch li{
-        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    }
-
-    .header.menu-opened .logo a, .header.menu-opened button#theme-toggle,
-    .header.menu-opened .lang-switch li{
-        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        color: var(--primary);
     }
 
     .js-overflow-hidden, .js-overflow-hidden body{
