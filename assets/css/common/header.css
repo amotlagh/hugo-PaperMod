@@ -187,11 +187,10 @@ body:not(.dark) #sun {
         display: block;
         position: relative;
         color: var(--primary);
-        font-weight: 100;
         text-decoration: none;
         font-size: 17px;
         line-height: 2.35;
-        font-weight: 200;
+        font-weight: 400;
         width: 100%;
     }
 
@@ -272,6 +271,7 @@ body:not(.dark) #sun {
 .logo-switches {
     display: inline-flex;
     margin: auto 4px;
+    font-weight: 400;
 }
 
 .lang-switch {
