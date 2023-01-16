@@ -8,9 +8,9 @@
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
     {{- if .Description }}
-    <div class="post-description">
+    <p class="post-description">
       {{ .Description }}
-    </div>
+    </p>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
