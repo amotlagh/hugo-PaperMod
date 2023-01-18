@@ -15,7 +15,6 @@
 }
 
 .profile .profile_inner > span{
-    margin-bottom: var(--gap);
     display: block;
 }
 
