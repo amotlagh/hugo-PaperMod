@@ -143,3 +143,8 @@
 
 {{- end }}
 {{- partial "extend_footer.html" . }}
+
+{{- /* instantpage */}}
+{{ $opts := dict "targetPath" "js/instantpage.js" "minify" hugo.IsProduction }}
+{{ $built := resources.Get "js/instantpage.js" | js.Build $opts }}
+<script defer crossorigin="anonymous" src="{{ $built.Permalink }}" type="module" defer></script>
