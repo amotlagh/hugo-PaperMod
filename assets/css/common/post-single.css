@@ -212,9 +212,24 @@
 }
 
 .post-content blockquote {
-    margin: 20px 0;
-    padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
+    margin: calc(2 * var(--gap)) 0;
+    background-color: var(--code-bg);
+    border-top-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+
+.post-content blockquote > p {
+    background:
+    linear-gradient(to right, var(--content) 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, var(--content) 4px, transparent 4px) 100% 0,
+    linear-gradient(to bottom, var(--content) 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, var(--content) 4px, transparent 4px) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: calc(1.5 * var(--gap));
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
 }
 
 .post-content hr {
