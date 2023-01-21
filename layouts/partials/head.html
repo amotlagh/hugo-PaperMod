@@ -89,6 +89,14 @@
 {{- end }}
 {{- end -}}
 
+{{- /* localize dates */}}
+{{- if (not site.Params.disableDateLocalization) }}
+{{ $defines := dict "process.env.lang_code" (printf `"%s"` site.LanguageCode) }}
+{{ $opts := dict "targetPath" "js/datelocale.ts" "defines" $defines "minify" hugo.IsProduction "target" "es2016" }}
+{{ $built := resources.Get "js/datelocale.ts" | js.Build $opts }}
+<script defer crossorigin="anonymous" src="{{ $built.Permalink }}"></script>
+{{- end }}
+
 {{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
