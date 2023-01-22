@@ -142,6 +142,7 @@ body:not(.dark) #sun {
     .header ul.menu li.menu-item {
         border-bottom: 1px solid;
         border-color: var(--menu-border);
+        margin-top: 5px;
         transform: scale(1.15) translateY(-30px);
         opacity: 0;
         transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), border-color 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
@@ -188,10 +189,9 @@ body:not(.dark) #sun {
         color: var(--primary);
         text-decoration: none;
         font-size: 17px;
-        line-height: 0;
+        line-height: 2.35;
         font-weight: 400;
         width: 100%;
-        padding: 22px 0;
     }
 
     .header.menu-opened {
