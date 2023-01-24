@@ -116,9 +116,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
 <link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
 <link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-
+<meta name="theme-color">
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
