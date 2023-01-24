@@ -92,7 +92,7 @@
 {{- /* localize dates */}}
 {{- if (site.Params.DateLocalization) }}
 {{ $defines := dict "process.env.lang_code" (printf `"%s"` site.LanguageCode) }}
-{{ $opts := dict "targetPath" "js/datelocale.js" "defines" $defines "minify" hugo.IsProduction "target" "es2016" }}
+{{ $opts := dict "targetPath" "assets/js/datelocale.js" "defines" $defines "minify" hugo.IsProduction "target" "es2016" }}
 {{ $built := resources.Get "js/datelocale.ts" | js.Build $opts }}
 <script defer crossorigin="anonymous" src="{{ $built.Permalink }}"></script>
 {{- end }}
