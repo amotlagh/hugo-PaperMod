@@ -377,8 +377,11 @@ h6:hover .anchor {
 .paginav {
     margin: 10px 0;
     display: flex;
-    line-height: 30px;
+    line-height: normal;
     border-radius: var(--radius);
+    font-size: 0.9em;
+    padding-bottom: 10px;
+    padding-top: 7px;
 }
 
 .paginav a {
@@ -436,6 +439,7 @@ img.in-text {
 
 .post-footer .related ul  {
     padding-inline-start: var(--gap);
+    font-size: 0.9em;
 }
 
 .post-footer .related a:hover {
