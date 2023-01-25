@@ -21,6 +21,10 @@
     flex-wrap: wrap;
 }
 
+.breadcrumbs {
+    margin-bottom: 10px;
+}
+
 .post-meta .i18n_list li {
     display: inline-flex;
     list-style: none;
