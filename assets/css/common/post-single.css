@@ -383,7 +383,7 @@ h6:hover .anchor {
     display: flex;
     line-height: normal;
     border-radius: var(--radius);
-    font-size: 0.9em;
+    font-size: 0.95em;
     padding-bottom: 10px;
     padding-top: 7px;
 }
@@ -443,7 +443,7 @@ img.in-text {
 
 .post-footer .related ul  {
     padding-inline-start: var(--gap);
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 .post-footer .related a:hover {
