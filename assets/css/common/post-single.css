@@ -229,7 +229,7 @@
     padding: calc(1.5 * var(--gap));
     margin: 0;
     text-align: center;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .post-content hr {
