@@ -152,3 +152,13 @@
 {{ $instantpagebuilt := resources.Get "js/instantpage.js" | js.Build $instantpage | resources.Minify }}
 <script defer crossorigin="anonymous" src="{{ $instantpagebuilt.Permalink }}" type="module"></script>
 {{- end }}
+
+{{- /* Quicklink */}}
+{{- if (.Param "Quicklink") }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+<script>
+window.addEventListener('load', () => {
+  quicklink.listen();
+});
+</script>
+{{- end }}
