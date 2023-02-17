@@ -17,8 +17,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.post-content strong,
+.post-content blockquote>p {
     color: var(--primary);
+}
+
+p,
+.post-content li,
+.post-content dd {
+    color: var(--paragraph);
 }
 
 body {
