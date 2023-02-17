@@ -187,14 +187,14 @@ body:not(.dark) #sun {
         position: relative;
         color: var(--primary);
         text-decoration: none;
-        font-size: 17px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 500;
         width: 100%;
     }
 
     .header ul.menu li.menu-item a > span {
         width: 100%;
-        height: 44px;
+        height: 45px;
         display: flex;
         align-items: center;
     }
