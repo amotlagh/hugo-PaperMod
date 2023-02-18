@@ -17,7 +17,8 @@
     --border: rgb(238, 238, 238);
     --contrast: #fff;
     --menu-border: rgb(215 215 215);
-    --paragraph: rgb(82 82 91);
+    --paragraph: rgb(0 0 0);
+    --btn: rgb(0 0 0);
 }
 
 .dark {
@@ -33,10 +34,11 @@
     --contrast: #000;
     --menu-border: rgb(66 66 69);
     --paragraph: rgb(161 161 170);
+    --btn: rgb(255 255 255);
 }
 
 .list {
-    background: var(--code-bg);
+    background: var(--theme);
 }
 
 .dark.list {

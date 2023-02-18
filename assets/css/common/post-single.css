@@ -380,18 +380,17 @@ h6:hover .anchor {
     line-height: normal;
     border-radius: var(--radius);
     font-size: 0.95em;
-    padding-bottom: 10px;
-    padding-top: 7px;
 }
 
 .paginav a {
     padding-inline-start: 14px;
     padding-inline-end: 14px;
     border-radius: var(--radius);
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 .paginav .title {
-    letter-spacing: 1px;
     text-transform: uppercase;
     font-size: small;
     color: var(--secondary);
