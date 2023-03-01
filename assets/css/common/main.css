@@ -66,10 +66,3 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
-
-@media screen and (max-width:768px) {
-    .main {
-        padding-top: var(--header-height);
-        min-height: calc(100vh - var(--header-height));
-    }
-}
