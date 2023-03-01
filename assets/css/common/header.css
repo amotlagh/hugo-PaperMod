@@ -12,7 +12,8 @@
     display: block;
 }
 
-.logo {
+.logo,
+#menu {
     display: flex;
     margin: auto var(--gap);
 }
@@ -49,233 +50,31 @@ body:not(.dark) #sun {
     display: none;
 }
 
-.menu {
-    display:flex;
-    margin:auto var(--gap);
-    list-style:none;
-    word-break:keep-all;
-    overflow-x:auto;
-    white-space:nowrap;
-}
-  
-.menu li+li {
-    margin-inline-start:var(--gap);
+#menu {
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.menu a {
-    font-size:16px;
+#menu li + li {
+    margin-inline-start: var(--gap);
 }
 
-.menu .active {
-    border-bottom:1px solid;
+#menu a {
+    font-size: 16px;
 }
 
-@media screen and (max-width:768px) {
-
-    .header {
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        height: var(--header-height);
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        overflow: hidden;
-        transition: all 0.5s ease-out, background 1s ease-out;
-        transition-delay: 0.2s;
-        z-index: 1;
-    }
-
-    .header .burger-container {
-        position: relative;
-        display: inline-block;
-        height: var(--header-height);
-        width: var(--header-height);
-        cursor: pointer;
-        transform: rotate(0deg);
-        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .header .burger-container #burger {
-        width: 18px;
-        height: 8px;
-        position: relative;
-        display: block;
-        margin: -4px auto 0;
-        top: 50%;
-    }
-
-    .header .burger-container #burger .bar {
-        width: 100%;
-        height: 1px;
-        display: block;
-        position: relative;
-        background: var(--primary);
-        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-        transition-delay: 0s;
-    }
-
-    .header .burger-container #burger .bar.topBar {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    .header .burger-container #burger .bar.btmBar {
-        transform: translateY(6px) rotate(0deg);
-    }
-
-    .header ul.menu {
-        position: relative;
-        display: block;
-        padding: 0 40px 0;
-        list-style: none;
-        width: 100%;
-        margin: 0;
-        padding-top: var(--gap);
-        height: 100vh;
-    }
-
-    .header ul.menu li.menu-item {
-        border-bottom: 1px solid;
-        border-color: var(--menu-border);
-        transform: scale(1.15) translateY(-30px);
-        opacity: 0;
-        transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), border-color 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    }
-
-    .header ul.menu li.menu-item:last-child{
-        border-bottom: 0;
-    }
-
-    .menu li+li{
-        margin-inline-start: 0; 
-    }
-
-    .menu .active {
-        font-weight:500;
-        border-bottom:0;
-    }
-
-    .header ul.menu li.menu-item:nth-child(1) {
-        transition-delay: 0.49s;
-    }
-    .header ul.menu li.menu-item:nth-child(2) {
-        transition-delay: 0.42s;
-    }
-    .header ul.menu li.menu-item:nth-child(3) {
-        transition-delay: 0.35s;
-    }
-    .header ul.menu li.menu-item:nth-child(4) {
-        transition-delay: 0.28s;
-    }
-    .header ul.menu li.menu-item:nth-child(5) {
-        transition-delay: 0.21s;
-    }
-    .header ul.menu li.menu-item:nth-child(6) {
-        transition-delay: 0.14s;
-    }
-    .header ul.menu li.menu-item:nth-child(7) {
-        transition-delay: 0.07s;
-    }
-
-    .header ul.menu li.menu-item a {
-        position: relative;
-        color: var(--primary);
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 500;
-        width: 100%;
-    }
-
-    .header ul.menu li.menu-item a > span {
-        width: 100%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-    }
-
-    .header.menu-opened {
-        height: 100%;
-        background-color: var(--contrast);
-        transition: all 0.3s ease-in, background 0s ease-in;
-        transition-delay: 0.25s;
-        position: fixed;
-    }
-
-    .header.menu-opened .burger-container #burger .bar {
-        background: var(--primary);
-    }
-
-    .header.menu-opened .burger-container {
-        transform: rotate(90deg);
-    }
-
-    .header.menu-opened .burger-container #burger .bar {
-        transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-        transition-delay: 0.2s;
-    }
-
-    .header.menu-opened .burger-container #burger .bar.topBar {
-        transform: translateY(4px) rotate(45deg);
-    }
-    .header.menu-opened .burger-container #burger .bar.btmBar {
-        transform: translateY(3px) rotate(-45deg);
-    }
-    .header.menu-opened ul.menu li.menu-item {
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(1) {
-        transition-delay: 0.27s;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(2) {
-        transition-delay: 0.34s;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(3) {
-        transition-delay: 0.41s;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(4) {
-        transition-delay: 0.48s;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(5) {
-        transition-delay: 0.55s;
-    }
-
-    .header.menu-opened ul.menu li.menu-item:nth-child(6) {
-        transition-delay: 0.62s;
-    }
-    
-    .header.menu-opened ul.menu li.menu-item:nth-child(7) {
-        transition-delay: 0.69s;
-    }
-
-    .logo a, button#theme-toggle,.lang-switch li{
-        color: var(--primary);
-    }
-
-    .js-overflow-hidden, .js-overflow-hidden body{
-        overflow: hidden !important;
-        height: 100% !important;
-    }
-
+#menu .active {
+    font-weight: 500;
+    border-bottom: 2px solid currentColor;
 }
-  
 
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
     display: inline-flex;
     margin: auto 4px;
-    font-weight: 400;
 }
 
 .lang-switch {
@@ -286,7 +85,7 @@ body:not(.dark) #sun {
 .lang-switch a {
     margin: auto 3px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .logo-switches {

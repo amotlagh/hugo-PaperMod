@@ -5,30 +5,28 @@
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        document.querySelector("meta[name=theme-color]").setAttribute("content", "#000");
     }
+
 </script>
 {{- /* theme is dark */}}
 {{- else if (eq site.Params.defaultTheme "dark") }}
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark');
-        document.querySelector("meta[name=theme-color]").setAttribute("content", "#fff");
+        document.body.classList.remove('dark')
     }
+
 </script>
 {{- else }}
 {{- /* theme is auto */}}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        document.querySelector("meta[name=theme-color]").setAttribute("content", "#000");
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark');
-        document.querySelector("meta[name=theme-color]").setAttribute("content", "#fff");
+        document.body.classList.remove('dark')
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
-        document.querySelector("meta[name=theme-color]").setAttribute("content", "#000");
     }
+
 </script>
 {{- end }}
 {{- /* theme-toggle is disabled and theme is auto */}}
@@ -41,7 +39,7 @@
 </script>
 {{- end }}
 
-<header id="header" class="header">
+<header class="header">
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
@@ -71,18 +69,18 @@
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
-                <span class="logo-text">{{- $label_text -}}</span>
+                {{- $label_text -}}
             </a>
             {{- end }}
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -122,18 +120,12 @@
             </div>
         </div>
         {{- $currentPage := . }}
-        <div class="burger-container">
-            <div id="burger">
-              <div class="bar topBar"></div>
-              <div class="bar btmBar"></div>
-            </div>
-          </div>
-        <ul class="menu">
+        <ul id="menu">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
-            <li class="menu-item">
+            <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
